@@ -454,7 +454,11 @@ Run or build the staging models, followed by the mart models. If supported:
     6. Clear the customer filter and confirm that the visual returns to total sales across all customers.
 
     ![Analyze total sales by product with customer filtering](Images/explored_data.png)
-    7. Optional -> Save.
+    7. Optional: select **Save** to retain the exploration.
+
+    ![Save the data exploration](Images/save_exploration.png)
+
+    The saved exploration will appear as an item in the workspace.
 
 **Success:** The semantic model contains three related tables and a reusable `Total Sales` measure. The visual shows total sales by product and responds correctly when a customer filter is applied or cleared.
 
