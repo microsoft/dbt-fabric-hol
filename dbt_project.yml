@@ -1,0 +1,13 @@
+name: fabric_dbt_hol
+version: 1.0.0
+config-version: 2
+profile: fabric_dbt_hol
+model-paths: [models]
+models:
+  fabric_dbt_hol:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: dbo

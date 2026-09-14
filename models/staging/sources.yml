@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: seed
+    schema: seed
+    tables:
+      - name: customers
+      - name: products
+      - name: orders

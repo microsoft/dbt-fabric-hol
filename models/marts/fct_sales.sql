@@ -1,0 +1,1 @@
+select o.order_id,o.order_date,c.customer_id,c.customer_name,c.segment,c.country,p.product_id,p.product_name,p.category,o.quantity,p.unit_price,cast(o.quantity*p.unit_price as decimal(18,2)) sales_amount from {{ ref('stg_orders') }} o join {{ ref('dim_customer') }} c on o.customer_id=c.customer_id join {{ ref('dim_product') }} p on o.product_id=p.product_id
