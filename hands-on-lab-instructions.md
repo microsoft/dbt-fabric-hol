@@ -197,7 +197,7 @@ Run or build the staging models, followed by the mart models. If supported:
 
 1. You can run selected models manually from the editor. Open the mart model `dim_customer`, and then choose **Run**, **Compile**, **Test**, or **Build** based on the development action you want to perform. In this example, run the data tests to verify the model's data quality.
 
-    ![Run tests for a selected dbt model](Images/selected_test_execution.png?v=2)
+    ![Run tests for a selected dbt model](Images/selected_test_execution.png?v=3)
 
 2. Open `models/marts/fct_sales.sql` and inspect how the model is built. Identify:
 
