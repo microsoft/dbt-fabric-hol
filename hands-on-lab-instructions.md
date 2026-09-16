@@ -71,22 +71,7 @@ You will start with raw sales data in a Fabric Warehouse, use a dbt Job to trans
 
 1. Copy the SQL from [`sql/02_load_seed_data.sql`](sql/02_load_seed_data.sql), paste it into a new SQL query, and select **Run**.
     ![Execute the seed data SQL](Images/execute_seed_data.png?v=2)
-2. Run the following query to confirm the expected number of rows was loaded:
-
-    ```sql
-    SELECT 'customers' AS table_name, COUNT(*) AS row_count
-    FROM seed.customers
-    UNION ALL
-    SELECT 'products', COUNT(*)
-    FROM seed.products
-    UNION ALL
-    SELECT 'orders', COUNT(*)
-    FROM seed.orders;
-    ```
-
-    ![Verify the loaded seed data](Images/view_seed_data.png?v=2)
-
-3. Inspect the contents of each source table. You can run each `SELECT` statement individually to review one result at a time, or run all three statements together and review each result set.
+2. Inspect the contents of each source table. You can run each `SELECT` statement individually to review one result at a time, or run all three statements together and review each result set.
 
     ```sql
     SELECT *
@@ -104,7 +89,7 @@ You will start with raw sales data in a Fabric Warehouse, use a dbt Job to trans
 
     Notice that `orders` contains customer and product IDs, but not their descriptive names or the product price. These raw tables are intentionally simple; the dbt project will clean, join, and organize this data into analytics-ready models.
 
-4. Run this query to preview the business information that can be derived by joining the raw tables:
+3. Run this query to preview the business information that can be derived by joining the raw tables:
 
     ```sql
     SELECT
